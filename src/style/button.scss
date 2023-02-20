@@ -1,0 +1,107 @@
+@import './variables';
+
+.button {
+    min-width: 101px;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+
+    border: none;
+    background-color: transparent;
+
+    transition: 0.3s transform;
+    cursor: pointer;
+
+    &__long {
+        display: block;
+        width: 170px;
+        margin: 45px auto 0 auto;
+    }
+
+    .inner {
+        position: relative;
+        background-color: $main-color;
+        line-height: 18px;
+        padding: 0 18px;
+
+        transition: none;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+
+          border-color: $main-color transparent;
+          border-style: solid;
+          border-width: 0 0 10px 10px;
+
+          transition: none;
+        }
+
+        &::before {
+            left: 0;
+            top: -10px;
+        }
+
+        &::after {
+            right: 0;
+            bottom: -10px;
+
+            transform: rotate(180deg);
+        }
+    }
+    &__main,
+    &__secondary {
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__secondary {
+        .inner {
+            background-color: $grey;
+            &::before {
+                border-color: $grey transparent;
+                transition: none;
+            }
+            &::after {
+                border-color: $grey transparent;
+                transition: none;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 10px;
+
+      transition: none;
+    }
+
+    &::before {
+        margin-left: 10px;
+    }
+
+    &::after {
+        margin-right: 10px;
+    }
+
+    &.button__main::before,
+    &.button__main::after {
+        background-color: $main-color;
+    }
+
+    &.button__secondary::before,
+    &.button__secondary::after {
+        background-color: $grey;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
