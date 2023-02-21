@@ -51,8 +51,16 @@ input::-webkit-inner-spin-button {
   margin: 0 auto;
   padding: 50px 0;
   max-width: 1100px;
+
+  .bg-decoration {
+    position: absolute;
+    right: -174px;
+    bottom: -170px;
+    z-index: -1;
+  }
 }
 
 main {
   margin-top: 50px;
+  position: relative;
 }
