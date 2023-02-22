@@ -31,22 +31,14 @@ class MarvelService {
       return description;
     }
 
-    const imgFormat = (path) => {
-      const imgName = path.split('/')[path.split('/').length - 1];
-      if(imgName === 'image_not_available') {
-        return true;
-      } else {
-        return false;
-      }
-    }
-
     return {
       id: char.id,
       name: char.name,
       description: `${char.description ? editDescription(char.description) : "This character has not description"}`,
       thumbnail: `${char.thumbnail.path}.${char.thumbnail.extension}`,
       homepage: char.urls[0].url,
-      wiki: char.urls[1].url
+      wiki: char.urls[1].url,
+      comics: char.comics.items.length > 10 ? char.comics.items.slice(0, 10) : char.comics.items
     }
   }
 }

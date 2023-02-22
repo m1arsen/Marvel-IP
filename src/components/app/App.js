@@ -7,6 +7,7 @@ import CharInfo from "../charInfo/CharInfo";
 import decoration from '../../resources/vision.svg';
 
 class App extends Component{
+
   state = {
     selectedChar: null
   }
@@ -30,7 +31,7 @@ class App extends Component{
           <img className="bg-decoration" src={decoration} alt="vision"/>
         </main>
       </div>
-    );
+    )
   }
 }
 
