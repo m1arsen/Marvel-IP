@@ -3,6 +3,7 @@
 .randomchar {
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    align-items: center;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 
     &__block {
@@ -20,9 +21,9 @@
     }
 
     &__info {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         row-gap: 10px;
-        grid-template-rows: minmax(29px, auto) 90px 38px;
     }
 
     &__name {
@@ -38,6 +39,8 @@
     }
 
     &__btns {
+        margin-top: auto;
+
         a:nth-child(1) {
             margin-right: 30px;
         }

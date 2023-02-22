@@ -12,12 +12,42 @@ class MarvelService {
     return await res.json();
   }
 
-  getAllCharacters = () => {
-    return this.getRecource(`${this._apiBase}characters?limit=9&offset=210&${this._apiKey}`);
+  getAllCharacters = async () => {
+    const res = await this.getRecource(`${this._apiBase}characters?limit=9&offset=210&${this._apiKey}`);
+    return res.data.results.map(this._transformCharacter)
   }
 
-  getCharacter = (id) => {
-    return this.getRecource(`${this._apiBase}characters/${id}?${this._apiKey}`)
+  getCharacter = async (id) => {
+    const res = await this.getRecource(`${this._apiBase}characters/${id}?${this._apiKey}`);
+    return this._transformCharacter(res.data.results[0]);
+  }
+
+  _transformCharacter = (char) => {
+
+    function editDescription(description){
+      if(description.length >= 200) {
+        description = description.slice(0, 197) + '...';
+      }
+      return description;
+    }
+
+    const imgFormat = (path) => {
+      const imgName = path.split('/')[path.split('/').length - 1];
+      if(imgName === 'image_not_available') {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    return {
+      id: char.id,
+      name: char.name,
+      description: `${char.description ? editDescription(char.description) : "This character has not description"}`,
+      thumbnail: `${char.thumbnail.path}.${char.thumbnail.extension}`,
+      homepage: char.urls[0].url,
+      wiki: char.urls[1].url
+    }
   }
 }
 
