@@ -69,7 +69,7 @@ class CharList extends Component{
     this.itemRefs.forEach(item => item.classList.remove('char__item_selected'));
     this.itemRefs[id].classList.add('char__item_selected');
     this.itemRefs[id].focus();
-}
+  }
 
   renderItems(arr){
     const items = arr.map((item, i) => {
@@ -135,7 +135,7 @@ class CharList extends Component{
   }
 }
 
-CharList.protoTypes = {
+CharList.propTypes = {
   onCharSelected: PropTypes.func.isRequired
 }
 
