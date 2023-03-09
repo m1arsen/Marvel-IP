@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Marvel-IP/static/css/main.2190e884.css",
+    "main.js": "/Marvel-IP/static/js/main.e75aeb28.js",
+    "static/media/mjolnir.svg": "/Marvel-IP/static/media/mjolnir.c4523c0c9b0a71bc50fd2bb50424a087.svg",
+    "static/media/vision.svg": "/Marvel-IP/static/media/vision.0637cfd917c976aae0e221b91272e449.svg",
+    "static/media/error.gif": "/Marvel-IP/static/media/error.42292aa12b6bc303ce99.gif",
+    "index.html": "/Marvel-IP/index.html",
+    "main.2190e884.css.map": "/Marvel-IP/static/css/main.2190e884.css.map",
+    "main.e75aeb28.js.map": "/Marvel-IP/static/js/main.e75aeb28.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2190e884.css",
+    "static/js/main.e75aeb28.js"
+  ]
+}
