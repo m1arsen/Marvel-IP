@@ -82,7 +82,12 @@
 
     &__grid {
       row-gap: 15px;
-      grid-template-columns: repeat(1, 200px);
+      column-gap: 10px;
+      grid-template-columns: repeat(2, calc(140px + (200 - 140) * (100vw - 320px) / (450 - 320)));
+    }
+
+    &__name {
+      font-size: 20px;
     }
 
     &__info {
