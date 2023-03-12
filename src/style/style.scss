@@ -1,6 +1,7 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 @import './button';
+@import './adaptive';
 
 * {
   font-family: "Roboto Condensed", sans-serif;
@@ -9,20 +10,13 @@
   box-sizing: border-box;
 }
 
-ul,
-li,
-dl {
+ul, li, dl {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
@@ -49,14 +43,12 @@ input::-webkit-inner-spin-button {
 
 .App {
   margin: 0 auto;
-  padding: 50px 0;
-  max-width: 1100px;
+  padding: 50px 15px;
+  max-width: 1130px;
 
   .bg-decoration {
-    position: absolute;
-    right: -174px;
-    bottom: -170px;
-    z-index: -1;
+    display: block;
+    margin: 20px auto 0;
   }
 }
 
@@ -78,5 +70,26 @@ main {
   }
   100% {
       opacity: 1
+  }
+}
+
+@media(max-width: 900px) {
+  .App {
+    max-width: 670px;
+  }
+}
+
+@media(max-width: 670px) {
+
+  .App {
+    padding: 20px 15px;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  .App .bg-decoration {
+    max-width: 300px;
   }
 }

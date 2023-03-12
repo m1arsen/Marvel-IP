@@ -8,6 +8,7 @@
 
     &__block {
         padding: 40px 35px;
+        min-height: 220px;
 
         display: grid;
         column-gap: 30px;
@@ -41,15 +42,19 @@
     &__btns {
         margin-top: auto;
 
-        a:nth-child(1) {
-            margin-right: 30px;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 10px;
     }
 
     &__static {
         padding: 40px 35px;
+        height: 100%;
         background-color: $dark;
         position: relative;
+
+        overflow: hidden;
 
         button {
             margin-top: 13px;

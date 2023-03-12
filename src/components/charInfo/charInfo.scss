@@ -5,6 +5,7 @@
     &__info {
       padding: 25px;
       height: min-content;
+      width: 100%;
 
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
       background-color: #fff;
@@ -39,9 +40,10 @@
     }
 
     &__btns {
-      a + a {
-          margin-top: 10px;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      column-gap: 15px;
     }
 
     &__descr {
