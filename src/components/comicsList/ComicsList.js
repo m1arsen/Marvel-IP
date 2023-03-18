@@ -3,8 +3,6 @@ import useMarvelService from '../../services/MarvelService';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Spinner from '../spinner/Spinner';
 import './comicsList.scss';
-import uw from '../../resources/UW.png';
-import xMen from '../../resources/x-men.png';
 
 const ComicsList = () => {
 
@@ -13,7 +11,7 @@ const ComicsList = () => {
           [newItemLoading, setNewItemLoading] = useState(false),
           [comicsEnded, setComicsEnded] = useState(false);
 
-    const {loading, error, getAllComics, clearError} = useMarvelService();
+    const {loading, error, getAllComics} = useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
@@ -76,8 +74,7 @@ const ComicsList = () => {
                 disabled={newItemLoading}
                 style={{'display': comicsEnded ? 'none' : 'block'}}
                 onClick={() => onRequest(offset)}>
-                <div className="inner">
-                        load more</div>
+                <div className="inner">load more</div>
             </button>
         </div>
     )

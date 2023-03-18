@@ -50,10 +50,10 @@ const useMarvelService = () => {
 
   const _transformComic = (comics) => {
     return {
-      id: comics.is,
+      id: comics.id,
       thumbnail: `${comics.thumbnail.path}.${comics.thumbnail.extension}`,
       title: comics.title,
-      price: comics.prices.price + '$'
+      price: comics.prices[0].price + '$'
     }
   }
 
