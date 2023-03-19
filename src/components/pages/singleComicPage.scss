@@ -3,9 +3,11 @@
 .single-comic {
     margin-top: 50px;
 
-    display: grid;
-    grid-template-columns: 293px 550px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     column-gap: 50px;
+    row-gap: 20px;
     align-items: start;
 
     &__img {
@@ -35,7 +37,7 @@
     }
 
     &__back {
-        justify-self: end;
+        margin-left: auto;
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;

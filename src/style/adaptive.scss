@@ -65,6 +65,10 @@
     grid-template-columns: repeat(2, 200px);
   }
 
+  .single-comic__info {
+    width: 100%;
+  }
+
   .app__banner {
     padding: 0 5px;
     justify-content: center;
@@ -131,7 +135,7 @@
       }
 
       &-text {
-        padding: 10px 0;
+        padding: 10px;
       }
     }
 
