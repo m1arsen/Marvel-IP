@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Marvel-IP/static/css/main.0f919207.css",
-    "main.js": "/Marvel-IP/static/js/main.f4201aa2.js",
+    "main.css": "/Marvel-IP/static/css/main.84e9e3da.css",
+    "main.js": "/Marvel-IP/static/js/main.505b57bf.js",
     "static/media/mjolnir.svg": "/Marvel-IP/static/media/mjolnir.c4523c0c9b0a71bc50fd2bb50424a087.svg",
     "static/media/vision.svg": "/Marvel-IP/static/media/vision.0637cfd917c976aae0e221b91272e449.svg",
     "static/media/Avengers.png": "/Marvel-IP/static/media/Avengers.4065c8f9c94e3d8b039a.png",
     "static/media/error.gif": "/Marvel-IP/static/media/error.42292aa12b6bc303ce99.gif",
     "static/media/Avengers_logo.png": "/Marvel-IP/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/Marvel-IP/index.html",
-    "main.0f919207.css.map": "/Marvel-IP/static/css/main.0f919207.css.map",
-    "main.f4201aa2.js.map": "/Marvel-IP/static/js/main.f4201aa2.js.map"
+    "main.84e9e3da.css.map": "/Marvel-IP/static/css/main.84e9e3da.css.map",
+    "main.505b57bf.js.map": "/Marvel-IP/static/js/main.505b57bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f919207.css",
-    "static/js/main.f4201aa2.js"
+    "static/css/main.84e9e3da.css",
+    "static/js/main.505b57bf.js"
   ]
 }
