@@ -11,10 +11,10 @@ const App = () => {
         <AppHeader/>
         <main>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path='/Marvel-IP'>
               <MainPage/>
             </Route>
-            <Route exact path='/comics'>
+            <Route exact path='/Marvel-IP/comics'>
               <ComicsList/>
             </Route>
           </Switch>
