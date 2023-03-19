@@ -13,9 +13,14 @@ const AppHeader = () => {
 
       <nav className="app__menu">
         <ul>
-          <li><NavLink exact activeStyle={{'color': '#9f0013'}} to='/Marvel-IP'>Characters</NavLink></li>
+          <li><NavLink
+            end
+            style={({isActive}) => ({'color': isActive ? '#9f0013' : 'inherit'})}
+            to='/Marvel-IP'>Characters</NavLink></li>
           /
-          <li><NavLink exact activeStyle={{'color': '#9f0013'}} to='/Marvel-IP/comics'>Comics</NavLink></li>
+          <li><NavLink
+            style={({isActive}) => ({'color': isActive ? '#9f0013' : 'inherit'})}
+            to='/Marvel-IP/comics'>Comics</NavLink></li>
         </ul>
       </nav>
     </header>

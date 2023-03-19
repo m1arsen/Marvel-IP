@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import {MainPage, ComicsList} from '../pages';
+import {MainPage, ComicsPage, SingleComicPage, Page404} from '../pages';
 import AppHeader from "../appHeader/AppHeader";
-import SingeComic from '../singleComic/SingleComic';
 
 const App = () => {
   return (
@@ -10,14 +9,12 @@ const App = () => {
       <div className="App">
         <AppHeader/>
         <main>
-          <Switch>
-            <Route exact path='/Marvel-IP'>
-              <MainPage/>
-            </Route>
-            <Route exact path='/Marvel-IP/comics'>
-              <ComicsList/>
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path='/Marvel-IP' element={<MainPage/>}/>
+            <Route path='/Marvel-IP/comics' element={<ComicsPage/>}/>
+            <Route path='/Marvel-IP/comics/:comicId' element={<SingleComicPage/>}/>
+            <Route path='/Marvel-IP/*' element={<Page404/>}/>
+          </Routes>
         </main>
       </div>
     </Router>

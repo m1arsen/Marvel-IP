@@ -65,6 +65,15 @@
     grid-template-columns: repeat(2, 200px);
   }
 
+  .app__banner {
+    padding: 0 5px;
+    justify-content: center;
+
+    img:last-child {
+      display: none;
+    }
+  }
+
   .randomchar {
     &__decoration {
       max-height: 140px;
@@ -111,6 +120,21 @@
     &__btns {
       justify-content: center;
     }
+
+  }
+
+  .app {
+    &__banner {
+
+      img {
+        display: none;
+      }
+
+      &-text {
+        padding: 10px 0;
+      }
+    }
+
 
   }
 

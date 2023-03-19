@@ -3,18 +3,16 @@
 .app {
     &__banner {
         width: 100%;
-        height: 100px;
         padding: 0 25px 0 45px;
 
         background-color: $dark;
 
-        display: grid;
-        grid-template-columns: 152px auto 133px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         &-text {
-            padding-left: 83px;
-            padding-top: 18px;
-
+            text-align: center;
             font-weight: 700;
             font-size: 24px;
             line-height: 32px;
