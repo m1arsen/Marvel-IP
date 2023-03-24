@@ -41,6 +41,26 @@
       background-color: $main-color;
       transform: translateY(-5px);
     }
+
+    &-enter {
+      opacity: 0;
+      transform: translateY(40%) scale(0.8);
+    }
+
+    &-enter-active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition: all 300ms ease-in;
+    }
+
+    &-exit {
+      opacity: 1;
+    }
+
+    &-exit-active {
+      opacity: 0;
+      transition: opacity 300ms ease-in;
+    }
   }
 
   &__name {
