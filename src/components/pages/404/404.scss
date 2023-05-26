@@ -1,0 +1,19 @@
+@import '../../../style/variables.scss';
+
+.notFound {
+  &__message, &__backBtn {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__backBtn {
+    display: block;
+
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+
+}
