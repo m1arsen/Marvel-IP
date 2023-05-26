@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .comics {
 
     &__list {
@@ -13,7 +15,12 @@
     }
 
     &__item {
-        transition: 0.2s transform;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $dark-light;
+        color: #fff;
+
+        transition: 0.2s linear;
 
         &-img {
             width: 225px;
@@ -23,6 +30,7 @@
 
         &-name {
             margin-top: 10px;
+            padding: 0 10px;
 
             font-weight: bold;
             font-size: 14px;
@@ -31,16 +39,18 @@
 
         &-price {
             margin-top: 5px;
+            padding: 0  10px 10px 10px;
 
             font-weight: bold;
             font-size: 14px;
             line-height: 18px;
-            color: rgba(0, 0, 0, 0.6);
+            color: rgba(#fff, 0.6);
             text-transform: uppercase;
         }
 
         &:hover {
             transform: translateY(-5px);
+            background-color: $grey;
         }
 
         &-enter {

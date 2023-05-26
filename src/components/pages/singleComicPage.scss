@@ -10,9 +10,12 @@
     row-gap: 20px;
     align-items: start;
 
+    color: #fff;
+
     &__img {
         width: 293px;
         height: 450px;
+        border-radius: 5px;
     }
 
     &__name {
@@ -33,7 +36,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
-        color: $main-color;
+        color: rgba(#fff, 0.6)
     }
 
     &__back {
@@ -42,8 +45,10 @@
         font-size: 18px;
         line-height: 24px;
 
+        transition: .2s linear;
+
         &:hover {
-            color: $main-color;
+            color: $main-color-hover;
         }
     }
 

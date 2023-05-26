@@ -62,9 +62,9 @@ const RandomChar = () => {
 
 const View = ({char}) => {
     const {name, description, thumbnail, homepage, wiki} = char;
-    let imgStyle = {'objectFit' : 'cover'};
+    let imgStyle = {'objectFit' : 'cover', 'border-radius' : '5px'};
     if (thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
-        imgStyle = {'objectFit' : 'contain'};
+        imgStyle = {'objectFit' : 'contain', 'border-radius' : '5px'};
     }
 
     return(

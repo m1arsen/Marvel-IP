@@ -21,13 +21,15 @@
     min-height: 318px;
 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
-    background-color: $dark;
+    background-color: $dark-light;
+    border-radius: 5px;
+    overflow: hidden;
     transition: .2s ease-in-out;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
-      background-color: $main-color;
+      background-color: $grey;
     }
 
     img {
@@ -37,8 +39,8 @@
     }
 
     &_selected {
-      box-shadow: 0 5px 20px $main-color;
-      background-color: $main-color;
+      box-shadow: 0 5px 20px $grey;
+      background-color: $grey;
       transform: translateY(-5px);
     }
 
