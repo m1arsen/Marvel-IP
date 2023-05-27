@@ -1,17 +1,29 @@
 {
   "files": {
-    "main.css": "/Marvel-IP/static/css/main.451788c9.css",
-    "main.js": "/Marvel-IP/static/js/main.88c3f479.js",
+    "main.css": "/Marvel-IP/static/css/main.1d17ab6e.css",
+    "main.js": "/Marvel-IP/static/js/main.c4829b2f.js",
+    "static/css/952.f1baf482.chunk.css": "/Marvel-IP/static/css/952.f1baf482.chunk.css",
+    "static/js/952.920fefdb.chunk.js": "/Marvel-IP/static/js/952.920fefdb.chunk.js",
+    "static/css/517.5f642917.chunk.css": "/Marvel-IP/static/css/517.5f642917.chunk.css",
+    "static/js/517.f97221b4.chunk.js": "/Marvel-IP/static/js/517.f97221b4.chunk.js",
+    "static/css/124.6af891ee.chunk.css": "/Marvel-IP/static/css/124.6af891ee.chunk.css",
+    "static/js/124.254edd07.chunk.js": "/Marvel-IP/static/js/124.254edd07.chunk.js",
     "static/media/mjolnir.svg": "/Marvel-IP/static/media/mjolnir.c4523c0c9b0a71bc50fd2bb50424a087.svg",
     "static/media/vision.svg": "/Marvel-IP/static/media/vision.0637cfd917c976aae0e221b91272e449.svg",
     "static/media/Avengers.png": "/Marvel-IP/static/media/Avengers.4065c8f9c94e3d8b039a.png",
     "static/media/Avengers_logo.png": "/Marvel-IP/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/Marvel-IP/index.html",
-    "main.451788c9.css.map": "/Marvel-IP/static/css/main.451788c9.css.map",
-    "main.88c3f479.js.map": "/Marvel-IP/static/js/main.88c3f479.js.map"
+    "main.1d17ab6e.css.map": "/Marvel-IP/static/css/main.1d17ab6e.css.map",
+    "main.c4829b2f.js.map": "/Marvel-IP/static/js/main.c4829b2f.js.map",
+    "952.f1baf482.chunk.css.map": "/Marvel-IP/static/css/952.f1baf482.chunk.css.map",
+    "952.920fefdb.chunk.js.map": "/Marvel-IP/static/js/952.920fefdb.chunk.js.map",
+    "517.5f642917.chunk.css.map": "/Marvel-IP/static/css/517.5f642917.chunk.css.map",
+    "517.f97221b4.chunk.js.map": "/Marvel-IP/static/js/517.f97221b4.chunk.js.map",
+    "124.6af891ee.chunk.css.map": "/Marvel-IP/static/css/124.6af891ee.chunk.css.map",
+    "124.254edd07.chunk.js.map": "/Marvel-IP/static/js/124.254edd07.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.451788c9.css",
-    "static/js/main.88c3f479.js"
+    "static/css/main.1d17ab6e.css",
+    "static/js/main.c4829b2f.js"
   ]
 }
