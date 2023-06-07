@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
@@ -105,10 +104,6 @@ const View = ({char}) => {
       </ul>
     </>
   )
-}
-
-CharInfo.propTypes = {
-  charId: PropTypes.number
 }
 
 export default CharInfo;

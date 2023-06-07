@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "formik": "^2.4.1",
     "framer-motion": "^10.9.1",
     "gh-pages": "^5.0.0",
     "http-server": "^14.1.1",
@@ -15,7 +16,8 @@
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "react-transition-group": "^4.4.5",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "yup": "^1.2.0"
   },
   "scripts": {
     "predeploy": "npm run build",

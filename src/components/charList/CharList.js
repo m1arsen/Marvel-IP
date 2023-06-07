@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import PropTypes from 'prop-types';
 
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
@@ -109,10 +108,6 @@ const CharList = (props) => {
     </div>
   )
 
-}
-
-CharList.propTypes = {
-  onCharSelected: PropTypes.func.isRequired
 }
 
 export default CharList;

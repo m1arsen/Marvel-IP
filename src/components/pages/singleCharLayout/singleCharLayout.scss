@@ -1,0 +1,44 @@
+@import '../../../style/variables.scss';
+
+.single-char {
+    margin-top: 50px;
+
+    display: flex;
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: start;
+
+    color: #fff;
+
+    &__img {
+        max-width: 40%;
+        border-radius: 5px;
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    &__descr {
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width: 670px) {
+    .single-char {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__img {
+            max-width: 250px;
+        }
+
+        &__name {
+            text-align: center;
+        }
+    }
+}
