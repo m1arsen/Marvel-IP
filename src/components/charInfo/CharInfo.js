@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import useMarvelService from '../../services/MarvelService';
-import Spinner from '../spinner/Spinner';
-import ErrorMessage from '../errorMessage/ErrorMessage';
-import Skeleton from '../skeleton/Skeleton';
+import setContent from '../../utils/setContent';
 
 import './charInfo.scss';
 
@@ -12,54 +10,45 @@ const CharInfo = (props) => {
 
   const [char, setChar] = useState(null);
 
-  const {loading, error, getCharacter, clearError} =  useMarvelService();
+  const {getCharacter, clearError, marvelProcess, setMarvelProcess} =  useMarvelService();
 
   useEffect(() => {
     updateChar();
   }, [props.charId])
 
   const updateChar = () => {
-    clearError();
     const {charId} = props;
 
     if(!charId) {
       return;
     }
 
+    clearError();
     getCharacter(charId)
       .then(onCharLoaded)
+      .then(() => setMarvelProcess('confirmed'))
   }
 
   const onCharLoaded = (char) => {
     setChar(char);
   }
 
-  const skeleton = char || loading || error ? null : <Skeleton/>
-  const errorMessage = error ? <ErrorMessage/> : null;
-  const spinner = loading ? <Spinner/> : null;
-  const content = !(loading || errorMessage || !char) ? <View char={char}/> : null;
-
   return(
     <div className="char__info">
-      {skeleton}
-      {errorMessage}
-      {spinner}
-      {content}
+      {setContent(marvelProcess, View, char)}
     </div>
   )
 
 }
 
-const View = ({char}) => {
-  const {name, description, thumbnail, homepage, wiki, comics} = char;
+const View = ({data}) => {
+  const {name, description, thumbnail, homepage, wiki, comics} = data;
   let imgStyle = {'objectFit' : 'cover', 'border-radius' : '5px'};
   if (thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
       imgStyle = {'objectFit' : 'contain', 'border-radius' : '5px'};
   }
 
   const comicsText = comics.length === 0 ? 'There is no comics with this character' : null;
-
-  console.log(comics)
 
   return (
     <>

@@ -1,11 +1,28 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
+import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
-import useMarvelService from '../../services/MarvelService';
 
 import './charList.scss';
+
+// Функция setContent скопирована в компонент, так как она должно быть изменено состояние загрузка в части подгрузки новых карточек
+
+const setContent = (marvelProcess, Component, newItemLoading) => {
+  switch(marvelProcess) {
+    case 'waiting':
+      return <Spinner/>;
+    case 'loading':
+      return newItemLoading ? <Component/> : <Spinner/>;
+    case 'confirmed':
+      return <Component/>
+    case 'error':
+      return <ErrorMessage/>;
+    default:
+      throw new Error('Unexpected procces state');
+  }
+}
 
 const CharList = (props) => {
 
@@ -14,7 +31,7 @@ const CharList = (props) => {
         [offset, setOffset] = useState(210),
         [charEnded, setCharEnded] = useState(false);
 
-  const {loading, error, getAllCharacters} = useMarvelService();
+  const {getAllCharacters, marvelProcess, setMarvelProcess} = useMarvelService();
 
   useEffect(() => {
     onRequest(offset, true);
@@ -24,6 +41,7 @@ const CharList = (props) => {
     initial ? setNewItemLoading(false) : setNewItemLoading(true);
     getAllCharacters(offset)
       .then(onCharListLoaded)
+      .then(() => setMarvelProcess('confirmed'))
   }
 
   const onCharListLoaded = (newCharList) => {
@@ -86,17 +104,10 @@ const CharList = (props) => {
     )
   }
 
-  const items = renderItems(charList);
-
-  const errorMessage = error ? <ErrorMessage/> : null;
-  const spinner = loading && !newItemLoading ? <Spinner/> : null;
-
   return(
     <div className="char__list">
 
-      {errorMessage}
-      {spinner}
-      {items}
+      {setContent(marvelProcess, () => renderItems(charList), newItemLoading)}
 
       <button
         className="button button__main button__long"
