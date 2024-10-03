@@ -1,105 +1,158 @@
 @import '../../style/variables.scss';
 
 .randomchar {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #fff;
+  background-color: $dark-light;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+
+  &__block {
+    padding: 40px 35px;
+    min-height: 220px;
+
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    align-items: center;
-    border-radius: 5px;
+    column-gap: 30px;
+    grid-template-columns: 180px auto;
+  }
+
+  &__img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__btns {
+    margin-top: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  &__static {
+    padding: 40px 35px;
+    height: 100%;
+    background-color: $dark;
+    position: relative;
+
+    background-color: $grey;
+
     overflow: hidden;
-    color: #fff;
-    background-color: $dark-light;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 
-    &__block {
-        padding: 40px 35px;
-        min-height: 220px;
-
-        display: grid;
-        column-gap: 30px;
-        grid-template-columns: 180px auto;
+    button {
+      margin-top: 13px;
     }
+  }
 
-    &__img {
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.045em;
+    color: #ffffff;
+
+    &:nth-child(2) {
+      margin-top: 33px;
     }
+  }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-    }
+  &__decoration {
+    position: absolute;
+    bottom: 14px;
+    right: -37px;
+  }
+}
 
-    &__name {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 29px;
-        text-transform: uppercase;
-    }
-
-    &__descr {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
+@media (max-width: 1130px) {
+  .randomchar {
     &__btns {
-        margin-top: auto;
-
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 30px;
-        row-gap: 10px;
+      column-gap: 15px;
     }
 
+    &__block,
     &__static {
-        padding: 40px 35px;
-        height: 100%;
-        background-color: $dark;
-        position: relative;
-
-        background-color: $grey;
-
-        overflow: hidden;
-
-        button {
-            margin-top: 13px;
-        }
+      padding: 30px 25px;
     }
+  }
+}
 
-    &__title {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: bold;
-        letter-spacing: -0.045em;
-        color: #FFFFFF;
+@media (max-width: 900px) {
+  .randomchar {
+    display: block;
 
-        &:nth-child(2) {
-            margin-top: 33px;
-        }
+    &__block,
+    &__static {
+      padding: 20px 15px;
     }
-
-    &__decoration {
-        position: absolute;
-        bottom: 14px;
-        right: -37px;
-    }
-
+  }
 }
 
 @media (max-width: 700px) {
-    .randomchar {
-        display: grid;
-        grid-template-columns: repeat(1, 100%);
+  .randomchar {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (max-width: 670px) {
+  .randomchar {
+    &__decoration {
+      max-height: 140px;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .randomchar {
+    &__block {
+      row-gap: 15px;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    &__img {
+      margin: 0 auto;
+    }
+
+    &__btns {
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
-    .randomchar__static {
-        padding: 20px 17px;
-    }
+  .randomchar__static {
+    padding: 20px 17px;
+  }
 
-    .randomchar__title {
-        font-size: 20px;
-    }
+  .randomchar__title {
+    font-size: 20px;
+  }
 }

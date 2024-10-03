@@ -1,99 +1,97 @@
 @import '../../style/variables.scss';
 
 .char {
+  &__info {
+    padding: 25px;
+    height: min-content;
+    width: 100%;
 
-    &__info {
-      padding: 25px;
-      height: min-content;
-      width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    background-color: $dark-light;
+    border-radius: 5px;
 
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-      background-color: $dark-light;
-      border-radius: 5px;
+    color: #fff;
 
-      color: #fff;
+    position: relative;
+    z-index: 5;
 
+    &-name {
+      margin-bottom: 35px;
+
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 29px;
+      text-transform: uppercase;
+    }
+
+    .skeleton {
+      margin-top: 30px;
+    }
+  }
+
+  &__basics {
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 25px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 15px;
+  }
+
+  &__descr {
+    margin-top: 15px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__comics {
+    margin-top: 10px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    &-list {
       position: relative;
-      z-index: 5;
-
-      &-name {
-        margin-bottom: 35px;
-
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 29px;
-        text-transform: uppercase;
-      }
-
-      .skeleton {
-        margin-top: 30px;
-      }
+      margin-top: 10px;
     }
 
-    &__basics {
-      display: grid;
-      grid-template-columns: 150px auto;
-      column-gap: 25px;
-
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-      }
-    }
-
-    &__btns {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 10px;
-      column-gap: 15px;
-    }
-
-    &__descr {
-      margin-top: 15px;
-
-      font-size: 14px;
-      line-height: 18px;
-    }
-
-    &__comics {
+    &-item {
+      width: 100%;
       margin-top: 10px;
 
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
+      line-height: 25px;
+      border-radius: 5px;
 
-      &-list {
-        position: relative;
-        margin-top: 10px;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $grey;
+        color: #fff;
       }
 
-      &-item {
+      a {
+        padding: 5px 10px;
         width: 100%;
-        margin-top: 10px;
-
-        line-height: 25px;
-        border-radius: 5px;
-
-        transition: .2s ease-in-out;
-
-        &:hover {
-          background-color: $grey;
-          color: #fff;
-        }
-
-        a {
-          padding: 5px 10px;
-          width: 100%;
-        }
       }
     }
+  }
 
-    &__select {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: center;
-    }
-
+  &__select {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
 }

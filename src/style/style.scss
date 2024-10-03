@@ -1,26 +1,32 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 @import './button';
-@import './adaptive';
 
 * {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #16171B;
+  background-color: #16171b;
 }
 
-ul, li, dl {
+ul,
+li,
+dl {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -29,8 +35,8 @@ a {
   color: inherit;
   display: inline-block;
   &:hover {
-      text-decoration: none;
-      color: inherit;
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -62,29 +68,28 @@ main {
 }
 
 .pulse {
-  animation: pulse 1.5s ease-in-out .5s infinite
+  animation: pulse 1.5s ease-in-out 0.5s infinite;
 }
 
 @keyframes pulse {
   0% {
-      opacity: 1
+    opacity: 1;
   }
   50% {
-      opacity: .4
+    opacity: 0.4;
   }
   100% {
-      opacity: 1
+    opacity: 1;
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .App {
     max-width: 670px;
   }
 }
 
-@media(max-width: 670px) {
-
+@media (max-width: 670px) {
   .App {
     padding: 20px 15px;
   }
@@ -95,5 +100,15 @@ main {
 
   .App .bg-decoration {
     max-width: 300px;
+
+    @media (max-width: 1130px) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .button__long {
+    margin: 25px auto 0 auto;
   }
 }

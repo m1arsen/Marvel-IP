@@ -1,13 +1,12 @@
 @import '../../style/variables.scss';
 
 .char {
-
   &__content {
     padding-top: 45px;
 
     display: flex;
     justify-content: space-between;
-    // column-gap: 25px;
+    column-gap: 25px;
     align-items: start;
   }
 
@@ -21,11 +20,11 @@
   &__item {
     min-height: 318px;
 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     background-color: $dark-light;
     border-radius: 5px;
     overflow: hidden;
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
     overflow: hidden;
     cursor: pointer;
 
@@ -76,5 +75,98 @@
 
     text-transform: uppercase;
   }
+}
 
+@media (max-width: 1130px) {
+  .char {
+    &__grid {
+      grid-template-columns: repeat(2, 200px);
+      row-gap: 25px;
+      column-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .char {
+    &__grid {
+      grid-template-columns: repeat(3, 200px);
+    }
+
+    &__content {
+      flex-wrap: wrap;
+      row-gap: 30px;
+    }
+
+    &__list {
+      margin: 0 auto;
+    }
+
+    &__info {
+      order: 1;
+    }
+
+    &__list {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .char__grid {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (max-width: 470px) {
+  .char {
+    &__content {
+      padding-top: 25px;
+      row-gap: 25px;
+    }
+
+    &__grid {
+      row-gap: 15px;
+      column-gap: 10px;
+      grid-template-columns: repeat(2, calc(140px + (200 - 140) * (100vw - 320px) / (450 - 320)));
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__info {
+      padding: 15px;
+    }
+
+    &__basics {
+      row-gap: 10px;
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &__info-name {
+      margin-bottom: 10px;
+    }
+
+    &__btns {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .char {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      min-height: unset;
+    }
+  }
 }

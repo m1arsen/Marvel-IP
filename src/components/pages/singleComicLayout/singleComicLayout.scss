@@ -1,74 +1,103 @@
 @import '../../../style/variables.scss';
 
 .single-comic {
-    margin-top: 50px;
+  margin-top: 50px;
 
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 20px;
+  align-items: start;
+
+  color: #fff;
+
+  &__img {
+    width: 293px;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+  &__descr {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__price {
+    margin-top: 25px;
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: rgba(#fff, 0.6);
+  }
+
+  &__back {
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+
+    transition: 0.2s linear;
+
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+
+  &-enter {
+    opacity: 0;
+    transform: translateY(40%) scale(0.8);
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all 300ms ease-in;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+@media (max-width: 670px) {
+  .single-comic__info {
+    width: 100%;
+  }
+
+  .app__banner {
+    padding: 0 5px;
     justify-content: center;
-    column-gap: 50px;
-    row-gap: 20px;
-    align-items: start;
 
-    color: #fff;
-
-    &__img {
-        width: 293px;
-        height: 450px;
-        border-radius: 5px;
+    img:last-child {
+      display: none;
     }
+  }
+}
 
-    &__name {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 29px;
+@media (max-width: 450px) {
+  .app {
+    &__banner {
+      img {
+        display: none;
+      }
+
+      &-text {
+        padding: 10px;
+      }
     }
-
-    &__descr {
-        margin-top: 25px;
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    &__price {
-        margin-top: 25px;
-
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 32px;
-        color: rgba(#fff, 0.6)
-    }
-
-    &__back {
-        margin-left: auto;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 24px;
-
-        transition: .2s linear;
-
-        &:hover {
-            color: $main-color-hover;
-        }
-    }
-
-    &-enter {
-        opacity: 0;
-        transform: translateY(40%) scale(0.8);
-    }
-
-    &-enter-active {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        transition: all 300ms ease-in;
-    }
-
-    &-exit {
-        opacity: 1;
-    }
-
-    &-exit-active {
-        opacity: 0;
-        transition: opacity 300ms ease-in;
-    }
+  }
 }
