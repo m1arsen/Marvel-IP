@@ -13,7 +13,11 @@ import { object } from 'prop-types';
 const setContent = (marvelProcess, Component, newItemLoading) => {
   switch (marvelProcess) {
     case 'waiting':
-      return <Spinner />;
+      return (
+        <div style={{ width: '50%' }}>
+          <Spinner />
+        </div>
+      );
     case 'loading':
       return newItemLoading ? <Component /> : <Spinner />;
     case 'confirmed':
@@ -106,7 +110,7 @@ const CharList = (props) => {
   }
 
   return (
-    <div className="char__list">
+    <div className="char__list" style={{ width: '100%' }}>
       {setContent(marvelProcess, () => renderItems(charList), newItemLoading)}
 
       <button
